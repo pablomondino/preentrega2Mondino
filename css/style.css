@@ -1,0 +1,410 @@
+/****************  selector universal  ***********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/***************** estilos globales ********/
+body {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 140px auto auto 1fr;
+    /* yo puse en tercer columna auto y anda bien*/
+    grid-template-areas:
+        "nav    header"
+        "nav    portada"
+        "nav    imagenes-departamentos"
+        "nav footer";
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*boton*/
+.boton {
+    background-color: rgb(31, 72, 239);
+    color: white;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    border: solid rgb(3, 3, 60) 2px;
+    box-shadow: 50px 3px 57px 18px rgba(0, 0, 0, 0.65);
+}
+
+/* a */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+/*******************  header   **********************/
+
+/* grid area ---->>>nav   */
+nav {
+    grid-area: nav;
+    background-color: green;
+    height: 100%;
+
+}
+
+/* grid area ---->>>header   */
+
+header {
+    grid-area: header;
+
+    background-color: red;
+}
+
+/* este es el id del header*/
+#header {
+    /*background-color: #016fb9;*/
+    /*ESTE ES EL COLR DE FONDO*/
+    width: 100%;
+    display: flex;
+    /*position: relative;*/
+    /* bottom: 40px;
+    left: 60px;*/
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    position: relative;
+    right: 100px;
+
+}
+
+#logo {
+    /*  display: inline;*/
+    /* position: relative;
+    top: 38px;*/
+}
+
+/*
+nav {
+   display: inline-block;
+       padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: larger;
+}
+*/
+/*
+ nav ul li {
+    padding: 20px;
+    list-style: none;
+    display: inline-block;
+  
+}
+*/
+nav {
+    display: flex;
+    position: fixed;
+
+}
+
+nav ul li {
+    padding: 20px;
+    margin-top: 30px;
+
+
+
+}
+
+/********************     footer    *************/
+
+/*grid area------>>>>footer*/
+footer {
+    grid-area: footer;
+    background-color: orange;
+    display: flex;
+    margin: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*background-color: #6d8ea0;*/
+    width: 100vw;
+   /* text-align: center;*/
+
+
+}
+
+#footer {
+   
+}
+
+#footer h2 {
+    color: white;
+}
+
+.footer-comunicate {
+    /*display: inline-block;*/
+    display: flex;
+    flex-direction: column;
+    background-color: #6d8ea0;
+    width: 45%;
+   /* text-align: center;*/
+}
+
+.footer-comunicate h2 {
+    margin-bottom: 20px;
+}
+
+.footer-comunicate nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 10px;
+}
+
+
+#ws img {
+    position: relative;
+    bottom: -15px;
+}
+
+#google img {
+    position: relative;
+    bottom: -15px;
+}
+
+.footer-seguinos nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 10px;
+}
+
+.footer-seguinos {
+    /*display: inline-block;*/
+    background-color: #6d8ea0;
+    width: 45%;
+   /* text-align: center;*/
+   /* margin-bottom: 20px;*/
+}
+
+.footer-seguinos h2 {
+    margin-bottom: 10px;
+}
+
+.footer-seguinos ul {
+    position: relative;
+    bottom: -15px;
+}
+
+#footer span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.caja{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+}
+
+
+
+/*********************    Estilos index    ****************/
+
+
+/* seccion portada*/
+/*grid area*/
+#portada {
+    padding: 30px;
+    grid-area: portada;
+    /*text-align: center;*/
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    /*width: auto;*/
+
+    align-items: center;
+    /*importante si no ponia esta quedaba gigante , para mi ocupaba todo lo disponible*/
+    justify-content: center;
+}
+
+#portada img {}
+
+#portada h1 {
+    font-size: xx-large;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background-color: #6d8ea0;
+    /*margin-bottom: 20px;*/
+
+}
+
+#portada p {
+    /*display: block;*/
+    padding: 20px 80px;
+    /* text-align: center;*/
+    margin-top: 30px;
+
+    margin-bottom: 20px;
+    font-size: large;
+}
+
+/* seccion imagenes departamentos*/
+/*grid area*/
+#imagenes-departamentos {
+    grid-area: imagenes-departamentos;
+    background-color: blue;
+    /*margin-left: 10vw;*/
+    /*text-align: center;*/
+    /*background-color: lightblue;*/
+    /* width: 100vw;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagenes-departamentos .boton-1 {
+    position: relative;
+    left: 55px;
+}
+
+#imagenes-departamentos .boton-2 {
+    position: relative;
+    left: 10px;
+}
+
+#imagenes-departamentos .boton-3 {
+   position: relative;
+    left: 2px;
+}
+
+#imagenes-departamentos .boton-4 {
+     position: relative;
+    left: 10px;
+}
+
+.depto {
+    margin: 20px;
+    /*display: inline-block;*/
+    width: 40vw;
+    
+}
+
+.depto2 {
+    margin-left: 60px;
+}
+
+
+/*********************   Sobre Nosotros    *****************/
+
+/* seccion sobrenosotros*/
+#sobre-nosotros {
+    text-align: center;
+    background-color: white;
+}
+
+#sobre-nosotros div {
+    background-color: #6d8ea0;
+    padding-bottom: 20px;
+}
+
+#sobre-nosotros h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#sobre-nosotros p {
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 80vw;
+    text-align: center;
+}
+
+/* seccion donde nos encontramos*/
+
+#donde-nos-encontramos {
+    background-color: #6d8ea0;
+    rgba(8, 229, 245, 0.979);
+    text-align: center;
+}
+
+#donde-nos-encontramos h2 {
+    padding: 30px;
+}
+
+#donde-nos-encontramos div p {
+    display: inline-block;
+    width: 45%;
+    padding: 15px;
+    text-align: justify;
+    position: relative;
+    bottom: 195px;
+}
+
+#donde-nos-encontramos div iframe {
+    display: inline-block;
+    width: 45%;
+}
+
+
+
+/**********************   contacto    *****************/
+
+
+/****      seccion contacto   *****/
+#contacto {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #6d8ea0;
+    text-align: center;
+}
+
+form {
+    padding: 30px;
+    text-align: center;
+}
+
+#info-pedido {
+    position: relative;
+    top: 25px;
+}
+
+#info-pedido div {
+    margin: 25px;
+}
+
+
+/**************************  faq   ********************/
+
+#preguntas-frecuentes-titulo {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #6d8ea0;
+    text-align: center;
+}
+
+#preguntas-frecuentes-preguntas {
+    padding: 50px;
+    justify-content: S;
+}
+
+#preguntas-frecuentes-preguntas div {
+    margin-top: 20px;
+}
+
+/**********************   tarifa  *****************/
+
+#titulo_de_tabla {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #6d8ea0;
+    text-align: center;
+}
+
+#explicacion-tabla {
+    margin: 30px 200px;
+}
+
+
+#tabla {
+    margin: 50px;
+    position: relative;
+    left: 25%;
+}
