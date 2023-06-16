@@ -136,7 +136,7 @@ footer {
     color: white;
 }
 
-.footer-comunicate {
+#footer-comunicate {
     /*display: inline-block;*/
     display: flex;
     flex-direction: column;
@@ -172,7 +172,8 @@ footer {
     margin: 10px;
 }
 
-.footer-seguinos {
+#footer-seguinos {
+    display: flex;
     /*display: inline-block;*/
     background-color: #6d8ea0;
     width: 45%;
