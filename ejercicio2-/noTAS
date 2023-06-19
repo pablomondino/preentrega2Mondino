@@ -1,6 +1,7 @@
-Sbody es distinto en las distintas paginas se puede poner 
+Si el body es distinto en las distintas paginas se puede poner 
 <div id="grid-index">
-    y de esta forma puedo identificar el grid container si es que van a ser distintos
+    y de esta forma puedo identificar el grid container 
+    si es que van a ser distintos
 
 
     nota ponemos text align center para centrar texto

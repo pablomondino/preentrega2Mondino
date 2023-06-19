@@ -74,6 +74,7 @@ header img {
 nav {
     display: flex;
     position: fixed;
+    left: 0;
 
 }
 
@@ -202,7 +203,7 @@ footer h2 {
 #portada {
     padding: 30px;
     grid-area: portada;
-    /*text-align: center;*/
+    text-align: center;
     background-color: yellow;
     display: flex;
     flex-direction: column;
@@ -227,9 +228,9 @@ footer h2 {
 #portada p {
     /*display: block;*/
     padding: 20px 80px;
-    /* text-align: center;*/
+    text-align: center;
     margin-top: 30px;
-
+    max-width: 70%;
     margin-bottom: 20px;
     font-size: large;
 }
@@ -244,12 +245,17 @@ footer h2 {
     /*background-color: lightblue;*/
     /* width: 100vw;*/
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-content: center;
+    justify-items: center;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
 }
 
+/*
 #imagenes-departamentos .boton-1 {
     position: relative;
     left: 55px;
@@ -269,7 +275,7 @@ footer h2 {
     position: relative;
     left: 10px;
 }
-
+*/
 .depto {
     margin: 20px;
     /*display: inline-block;*/
@@ -279,10 +285,11 @@ footer h2 {
 
 }
 
+/*
 .depto2 {
     margin-left: 60px;
 }
-
+*/
 
 /*********************   Sobre Nosotros    *****************/
 
@@ -403,11 +410,12 @@ form {
 }
 
 
-
+/* este es el tope para tablets
+estos estilos se aplican para resoluciones a 1024*/
 /*agregando media query*/
 @media (max-width:1024px) {
     body {
-       /* display: grid;*/
+        /* display: grid;*/
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto auto;
         /* yo puse en tercer columna auto y anda bien*/
@@ -419,17 +427,78 @@ form {
             "footer";
         font-family: Arial, Helvetica, sans-serif;
     }
+
     nav {
         flex-direction: row;
-        
+       
+
         position: static;
         height: auto;
-    
+
     }
-    #barra-paginas{
+
+    #barra-paginas {
         display: flex;
         flex-direction: row;
-        
+
     }
-    
+
+}
+
+/* esta query es para mobile
+estos estilos se aplican para resoluciones menores a 586*/
+/*agregando media query*/
+
+@media (max-width:586px) {
+    body {
+        /* display: grid;*/
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        /* yo puse en tercer columna auto y anda bien*/
+        grid-template-areas:
+            "header"
+            "nav"
+            "portada"
+            "imagenes-departamentos"
+            "footer";
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #header{
+        flex-direction: column;
+    }
+    #imagenes-departamentos {
+        flex-direction: column;
+    }
+
+    .depto {
+        margin: 20px;
+        /*display: inline-block;*/
+        width: auto;
+        position: relative;
+        left: 0;
+    }
+
+    #footer {
+          justify-content: space-around;
+          height: 500px;
+      
+    }
+
+   
+    #engloba-comunicate-seguinos {
+        flex-direction: column;
+      
+    }
+
+    nav #barra-paginas{
+        flex-direction: column;
+        align-items: center;
+        font-size: large;
+     
+
+    }
+    nav #barra-pagina li{
+    text-decoration: none;
+    }
 }
